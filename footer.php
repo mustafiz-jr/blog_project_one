@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Footer Section -->
 <footer class="bg-dark text-light py-5">
     <div class="container">
@@ -19,7 +7,7 @@
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px;">About</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec nulla malesuada feugiat at at orci. Donec fringilla sollicitudin dolor.</p>
             </div>
-            
+
             <!-- Quick Links Section -->
             <div class="col-md-4">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px;">Quick Links</h5>
@@ -30,7 +18,7 @@
                     <li><a href="#" class="text-light text-decoration-none hover-effect">Contact</a></li>
                 </ul>
             </div>
-            
+
             <!-- Social Media Section -->
             <div class="col-md-4">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px;">Follow Us</h5>
@@ -68,18 +56,20 @@
     .hover-effect {
         transition: color 0.3s ease, transform 0.3s ease;
     }
-    
+
     .hover-effect:hover {
-        color:rgb(70, 154, 188); /* Change to a vibrant color on hover */
+        color: rgb(70, 154, 188);
+        /* Change to a vibrant color on hover */
         transform: translateY(-5px);
     }
-    
+
     /* Make footer text a bit more elegant */
     footer h5 {
         font-size: 1.25rem;
         font-weight: 600;
         text-transform: uppercase;
-        color: rgb(70, 154, 188); /* Vibrant color for section titles */
+        color: rgb(70, 154, 188);
+        /* Vibrant color for section titles */
     }
 
     /* Slight shadow effect for footer */
@@ -93,7 +83,7 @@
         opacity: 0.8;
     }
 
-    list-unstyled li a:hover{
+    list-unstyled li a:hover {
         color: rgb(70, 154, 188);
     }
 </style>
@@ -101,8 +91,26 @@
 
 
 
-    <!--Bootstrap js link-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--Bootstrap js link-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+<script>
+    tinymce.init({
+        selector: 'textarea#short_des',
+        placeholder: "hello world"
+    });
+</script>
+
+
+
+
+
+
 </body>
 
 </html>
