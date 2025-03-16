@@ -48,9 +48,6 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS (ensure you have Bootstrap 5 JS & Font Awesome included) -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
 <style>
     /* Hover Effect */
     .hover-effect {
@@ -89,25 +86,25 @@
 </style>
 
 
+<!-- jquery link  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 <!--Bootstrap js link-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
-
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<!-- Trumbowyg Script -->
+<script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.25.1/dist/trumbowyg.min.js"></script>
 
 
 <script>
-    tinymce.init({
-        selector: 'textarea#short_des',
-        placeholder: "hello world"
-    });
+    // Initialize Trumbowyg
+$('#short_des').trumbowyg();
+
+$('#description').trumbowyg();
 </script>
-
-
-
 
 
 
