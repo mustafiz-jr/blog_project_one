@@ -94,6 +94,8 @@
 <!--Bootstrap js link-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+<!-- sweet alert cdn -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Trumbowyg Script -->
 <script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.25.1/dist/trumbowyg.min.js"></script>
@@ -104,6 +106,33 @@
 $('#short_des').trumbowyg();
 
 $('#description').trumbowyg();
+
+
+
+
+
+
+
+
+const submit = document.getElementById("submit");
+submit.addEventListener("submit",function(stop){
+    stop.preventDefault();
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you want to submit the form?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, submit!',
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // If confirmed, submit the form
+        form.submit();
+      }
+    });
+
+})
 </script>
 
 

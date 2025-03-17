@@ -5,7 +5,7 @@ include("header.php");
 <main>
     <section>
         <h2 class="my-5 text-center">Include your Blog Information</h2>
-        <form action="" method="post" class="container p-5">
+        <form action="" method="post" class="container p-5" id="submit">
             <input type="text" class="w-100 form-control border-0 border-bottom border-dark p-2" placeholder="Enter your Title ....">
             <br>
             <br>
