@@ -128,11 +128,12 @@ submit.addEventListener("submit",function(stop){
     }).then((result) => {
       if (result.isConfirmed) {
         // If confirmed, submit the form
-        form.submit();
+        submit.submit();
       }
     });
 
 })
+
 </script>
 
 
