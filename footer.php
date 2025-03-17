@@ -24,16 +24,16 @@
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px;">Follow Us</h5>
                 <ul class="list-unstyled d-flex">
                     <li class="me-4">
-                        <a href="#" class="text-light hover-effect"><i class="fab fa-facebook-f fa-2x"></i> </a>
+                        <a href="#" class="text-light hover-effect"><i onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" class="fab fa-facebook-f fa-2x"></i> </a>
                     </li>
                     <li class="me-4">
-                        <a href="#" class="text-light hover-effect"><i class="fab fa-twitter fa-2x"></i> </a>
+                        <a href="#" class="text-light hover-effect"><i onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" class="fab fa-twitter fa-2x"></i> </a>
                     </li>
                     <li class="me-4">
-                        <a href="#" class="text-light hover-effect"><i class="fab fa-instagram fa-2x"></i> </a>
+                        <a href="#" class="text-light hover-effect"><i onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" class="fab fa-instagram fa-2x"></i> </a>
                     </li>
                     <li>
-                        <a href="#" class="text-light hover-effect"><i class="fab fa-linkedin-in fa-2x"></i> </a>
+                        <a href="#" class="text-light hover-effect"><i onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" class="fab fa-linkedin-in fa-2x"></i> </a>
                     </li>
                 </ul>
             </div>
