@@ -13,8 +13,8 @@ $_POST['description']
 $result = $connect->query($senddata);
 
 if($result){
+    return header("Location: /reports.php");
     echo("data is entered!");
-    return header("/reports.php");
 }else{
     echo("error!" . $connect->error);
     die();
