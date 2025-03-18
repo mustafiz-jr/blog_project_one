@@ -17,7 +17,6 @@ include("header.php");
     main {
         padding: 40px 30px;
         background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
     }
 
@@ -48,7 +47,8 @@ include("header.php");
         font-size: 1.1rem;
     }
 
-    .beautiful-table th, .beautiful-table td {
+    .beautiful-table th,
+    .beautiful-table td {
         padding: 16px 20px;
         text-align: left;
         font-size: 1rem;
@@ -63,7 +63,6 @@ include("header.php");
     /* Hover effect for rows */
     .beautiful-table tbody tr:hover {
         background-color: #ecf0f1;
-        transform: translateY(-2px);
         transition: transform 0.2s ease-in-out;
     }
 
@@ -74,7 +73,8 @@ include("header.php");
     }
 
     /* Delete button styling */
-    .delete-btn, .edit-btn {
+    .delete-btn,
+    .edit-btn {
         padding: 8px 18px;
         border-radius: 5px;
         text-decoration: none;
@@ -93,7 +93,9 @@ include("header.php");
 
     .delete-btn:hover {
         background-color: #c0392b;
-        transform: translateY(-2px);
+        color: #7f8c8d;
+
+        transform:scale(1.05);
     }
 
     /* Edit button */
@@ -103,8 +105,10 @@ include("header.php");
     }
 
     .edit-btn:hover {
-        background-color: #2980b9;
-        transform: translateY(-2px);
+        background-color:rgb(68, 180, 255);
+        color: #7f8c8d;
+        transform:scale(1.05);
+
     }
 
     /* No data styling */
@@ -125,33 +129,43 @@ include("header.php");
     <section>
         <h2 class="text-center my-5">All Blog Data</h2>
 
-        <?php if($result->num_rows > 0){ ?>
-        <table class="beautiful-table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Short Description</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while($row = $result->fetch_assoc()){ ?>
-                <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['title']; ?></td>
-                    <td><?php echo $row['short_des']; ?></td>
-                    <td><?php echo $row['description']; ?></td>
-                    <td><?php echo $row['status']; ?></td>
-                    <td><a href="delete.php?id=<?php echo $row['id']; ?>" class="delete-btn">Delete</a></td>
-                    <td><a href="edit.php?id=<?php echo $row['id']; ?>" class="edit-btn">Edit</a></td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+        <?php if ($result->num_rows > 0) { ?>
+            <table class="beautiful-table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Short Description</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while ($row = $result->fetch_assoc()) { ?>
+                        <tr>
+                            <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['title']; ?></td>
+                            <td><?php echo $row['short_des']; ?></td>
+                            <td><?php echo $row['description']; ?></td>
+                            <td>
+                                <?php if ($row['status'] == 0) { ?>
+                                    <a href="actions/on_off.php?id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">
+                                        <?php echo $row['status'] ?> > ON
+                                    </a>
+                                <?php } else { ?>
+                                    <a href="actions/on_off.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm">
+                                        <?php echo $row['status'] ?> > OFF
+                                    </a>
+                                <?php } ?>
+                            </td>
+                            <td><a href="actions/delete.php?id=<?php echo $row['id']; ?>" class="delete-btn">Delete</a></td>
+                            <td><a href="updata.php?id=<?php echo $row['id']; ?>" class="edit-btn">Edit</a></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
         <?php } else { ?>
             <p class="no-data">No data is collected!</p>
         <?php } ?>
@@ -165,4 +179,3 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
-
