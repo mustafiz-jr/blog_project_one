@@ -51,8 +51,8 @@ include("actions/fetch.php");
                             Links
                         </a>
                         <ul class="dropdown-menu bg-dark text-light" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-light" href="#">Login</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Sign Up</a></li>
+                            <li><a class="dropdown-item text-light bg-dark" onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" href="#">Login</a></li>
+                            <li><a class="dropdown-item text-light bg-dark" onmouseover="this.style.color='rgb(70, 154, 188)'" onmouseout="this.style.color='white'" href="#">Sign Up</a></li>
                         </ul>
                     </li>
                 </ul>
