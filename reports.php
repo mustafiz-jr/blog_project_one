@@ -170,7 +170,7 @@ include("header.php");
             <p class="no-data">No data is collected!</p>
         <?php } ?>
     </section>
-    <div>
+    <div class="my-5">
         <a href="userinput.php" class="btn btn-secondary">Add more Blog</a>
     </div>
 </main>

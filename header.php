@@ -57,8 +57,11 @@ include("actions/fetch.php");
                 </li>
             </ul>
             <form class="d-flex">
-                <input name="search" class="form-control me-2 bg-dark text-secondary border-light" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px;">
-                <button class="btn btn-outline-info" type="submit" style="border-radius: 20px; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='rgb(70, 154, 188)'" onmouseout="this.style.backgroundColor='transparent'">Search</button>
+                <input class="form-control me-2 bg-dark text-secondary border-info" type="text" placeholder="Search..." aria-label="Search" style="border-radius: 20px;" name="search" value="<?php echo isset($_GET["search"]) ?  $_GET["search"] : '' ?>">
+                <button class="btn btn-outline-info" type="submit" style="border-radius: 20px; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='rgb(70, 154, 188)'" type="submit" onmouseout="this.style.backgroundColor='transparent'">Search</button>
+                <?php if (isset($_GET["search"])) { ?>
+                        <a class="btn btn-danger mx-2 rounded-pill" href="reports.php">Reset</a>
+                    <?php } ?>
             </form>
         </div>
     </div>
