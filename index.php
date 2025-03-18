@@ -54,25 +54,27 @@ $row = $result->fetch_assoc();
 </section>
 
 <!-- here is blog section that will show interactivly -->
-<?php if ($row['status'] == 1){ ?>
-<section>
-    <h1 class="text-center my-5">Here is my Blog.</h1>
-<?php while($row = $result->fetch_assoc()){ ?>
-    <div class="card">
-        <img src="" alt="">
-        <h5 class="card-title"><?php echo $row['title'] ?></h5>
-        <p class="card-text"><?php echo $row['short_des'] ?></p>
-        <p class="card-text"><?php echo $row['description'] ?></p>
-        <a href="">Blog Details</a>
-    </div>
-<?php } ?>
+<?php if ($row['status'] == 1) { ?>
+    <section>
+        <h1 class="text-center my-5">Here is my Blog.</h1>
+        <?php while ($row = $result->fetch_assoc()) { ?>
+            <div class="card">
+                <img src="" alt="">
+                <h5 class="card-title"><?php echo $row['title'] ?></h5>
+                <p class="card-text"><?php echo $row['short_des'] ?></p>
+                <p class="card-text"><?php echo $row['description'] ?></p>
+                <a href="">Blog Details</a>
+            </div>
+        <?php } ?>
 
-<?php }else{ ?>
-<p class="text-danger text-center my-5">No blog is activated!</p>
-<?php } ?>
-</section>
+    <?php } else { ?>
+        <p class="text-danger text-center my-5">No blog is activated! <br>
+            please active your blog!
+        </p>
+    <?php } ?>
+    </section>
 
 
-<?php
-include("footer.php");
-?>
+    <?php
+    include("footer.php");
+    ?>
