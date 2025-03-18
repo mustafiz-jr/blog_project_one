@@ -57,7 +57,7 @@ include("actions/fetch.php");
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2 bg-dark text-secondary border-light" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px;">
+                <input name="search" class="form-control me-2 bg-dark text-secondary border-light" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px;">
                 <button class="btn btn-outline-info" type="submit" style="border-radius: 20px; transition: background-color 0.3s ease-in-out;" onmouseover="this.style.backgroundColor='rgb(70, 154, 188)'" onmouseout="this.style.backgroundColor='transparent'">Search</button>
             </form>
         </div>
