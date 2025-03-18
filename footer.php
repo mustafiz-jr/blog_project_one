@@ -86,8 +86,8 @@
 </style>
 
 
-<!-- jquery link  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jQuery (required for Summernote) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
@@ -97,19 +97,18 @@
 <!-- sweet alert cdn -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- Trumbowyg Script -->
-<script src="https://cdn.jsdelivr.net/npm/trumbowyg@2.25.1/dist/trumbowyg.min.js"></script>
-
+<!-- Summernote JS -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <script>
-    // Initialize Trumbowyg
-$('#short_des').trumbowyg();
 
-$('#description').trumbowyg();
+$(document).ready(function() {
+    $('#short_des').summernote();
+  });
 
-
-
-
+  $(document).ready(function() {
+    $('#description').summernote();
+  });
 
 
 
