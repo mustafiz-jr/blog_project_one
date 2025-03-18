@@ -25,6 +25,7 @@ include("header.php");
             <br>
             <br>
             <button type="submit" class="btn btn-md btn-secondary">Submit</button>
+            <a href="reports.php" class="btn btn-secondary">Reports</a>
         </form>
     </section>
 </main>
