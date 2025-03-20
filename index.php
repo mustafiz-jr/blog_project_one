@@ -23,6 +23,61 @@ $row = $result->fetch_assoc();
     .carousel-inner img {
         object-fit: cover;
     }
+
+/* Card container */
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling */
+.custom-card .card-img-top {
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Title and description styling */
+.custom-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.custom-card .card-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Button styling */
+.custom-card .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-card .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Hover effect */
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+
 </style>
 <section id="index_slider">
     <div id="carouselExampleIndicators" class="carousel slide">
@@ -58,23 +113,21 @@ $row = $result->fetch_assoc();
 <!-- here is blog section that will show interactivly -->
 <?php if ($row['status'] == 1) { ?>
     <section class="row justify-content-center align-items-center gap-5 g-5">
-        <h1 class="text-center my-5">Here is my Blog.</h1>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <div class="card col-md-3 p-3">
-                <img src="" alt="">
-                <h5 class="card-title"><?php echo $row['title'] ?></h5>
-                <p class="card-text"><?php echo $row['short_des'] ?></p>
-                <p class="card-text"><?php echo $row['description'] ?></p>
-                <a href="blog_detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-md w-50">Blog Details</a>
-            </div>
-        <?php } ?>
-
-    <?php } else { ?>
-        <p class="text-danger text-center my-5">No blog is activated! <br>
-            please active your blog!
-        </p>
+    <h1 class="text-center my-5">Here is my Blog.</h1>
+    <?php while ($row = $result->fetch_assoc()) { ?>
+        <div class="card col-md-3 p-3 custom-card">
+            <!-- Example default image -->
+            <img src="path_to_image/<?php echo $row['image']; ?>" alt="Blog Image" class="card-img-top rounded-3">
+            <h5 class="card-title mt-3 text-center"><?php echo $row['title'] ?></h5>
+            <p class="card-text text-center"><?php echo $row['short_des'] ?></p>
+            <a href="blog_detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-md w-75 d-block mx-auto mb-3">Blog Details</a>
+        </div>
     <?php } ?>
-    </section>
+    <?php } else { ?>
+        <p class="text-danger text-center my-5">No blog is activated! <br> please activate your blog!</p>
+    <?php } ?>
+</section>
+
 
 
     <?php
