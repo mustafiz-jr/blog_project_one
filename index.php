@@ -65,7 +65,7 @@ $row = $result->fetch_assoc();
                 <h5 class="card-title"><?php echo $row['title'] ?></h5>
                 <p class="card-text"><?php echo $row['short_des'] ?></p>
                 <p class="card-text"><?php echo $row['description'] ?></p>
-                <a href="" class="btn btn-primary btn-md w-50">Blog Details</a>
+                <a href="blog_detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-md w-50">Blog Details</a>
             </div>
         <?php } ?>
 
