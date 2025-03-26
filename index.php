@@ -117,7 +117,7 @@ $row = $result->fetch_assoc();
     <?php while ($row = $result->fetch_assoc()) { ?>
         <div class="card col-md-3 p-3 custom-card">
             <!-- Example default image -->
-            <img src="path_to_image/<?php echo $row['image']; ?>" alt="Blog Image" class="card-img-top rounded-3">
+            <!-- <img src="path_to_image/<?php echo $row['image']; ?>" alt="Blog Image" class="card-img-top rounded-3"> -->
             <h5 class="card-title mt-3 text-center"><?php echo $row['title'] ?></h5>
             <p class="card-text text-center"><?php echo $row['short_des'] ?></p>
             <a href="blog_detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-md w-75 d-block mx-auto mb-3">Blog Details</a>
@@ -127,7 +127,9 @@ $row = $result->fetch_assoc();
         <p class="text-danger text-center my-5">No blog is activated! <br> please activate your blog!</p>
     <?php } ?>
 </section>
-
+<br>
+<br>
+<br>
 
 
     <?php
