@@ -12,5 +12,3 @@ if ($search) {
 
     $result = $connect->query($data);
 }
-
-?>

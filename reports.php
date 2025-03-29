@@ -95,7 +95,7 @@ include("header.php");
         background-color: #c0392b;
         color: #7f8c8d;
 
-        transform:scale(1.05);
+        transform: scale(1.05);
     }
 
     /* Edit button */
@@ -105,9 +105,9 @@ include("header.php");
     }
 
     .edit-btn:hover {
-        background-color:rgb(68, 180, 255);
+        background-color: rgb(68, 180, 255);
         color: #7f8c8d;
-        transform:scale(1.05);
+        transform: scale(1.05);
 
     }
 

@@ -10,12 +10,10 @@ $update = sprintf("UPDATE `data` SET   `title`='$title' , `short_des`='$short_de
 
 $result = $connect->query($update);
 
-if($result){
-    echo("Data is updated!");
+if ($result) {
+    echo ("Data is updated!");
     header("location: /reports.php");
-}else{
-    echo("error!" . $connect->error);
+} else {
+    echo ("error!" . $connect->error);
     die();
 }
-
-?>

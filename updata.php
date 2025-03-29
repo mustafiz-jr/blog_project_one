@@ -1,8 +1,8 @@
-<?php 
+<?php
 include("actions/database.php");
 
 
-$update = sprintf("SELECT * FROM `data` WHERE `id`=%s",$_GET['id']);
+$update = sprintf("SELECT * FROM `data` WHERE `id`=%s", $_GET['id']);
 
 $result = $connect->query($update);
 $row = $result->fetch_assoc();

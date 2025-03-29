@@ -101,38 +101,36 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 
 <script>
-
-$(document).ready(function() {
-    $('#short_des').summernote();
-  });
-
-  $(document).ready(function() {
-    $('#description').summernote();
-  });
-
-
-
-
-const submit = document.getElementById("submit");
-submit.addEventListener("submit",function(stop){
-    stop.preventDefault();
-
-    Swal.fire({
-      title: 'Are you sure?',
-      text: 'Do you want to submit the form?',
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, submit!',
-      cancelButtonText: 'Cancel'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // If confirmed, submit the form
-        submit.submit();
-      }
+    $(document).ready(function() {
+        $('#short_des').summernote();
     });
 
-})
+    $(document).ready(function() {
+        $('#description').summernote();
+    });
 
+
+
+
+    const submit = document.getElementById("submit");
+    submit.addEventListener("submit", function(stop) {
+        stop.preventDefault();
+
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'Do you want to submit the form?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, submit!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If confirmed, submit the form
+                submit.submit();
+            }
+        });
+
+    })
 </script>
 
 

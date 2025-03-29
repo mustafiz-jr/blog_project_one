@@ -3,10 +3,11 @@ include("header.php");
 ?>
 
 <style>
-    #editor_container{
+    #editor_container {
         height: 200px;
     }
-    #editor_container_two{
+
+    #editor_container_two {
         height: 200px;
     }
 </style>
@@ -18,10 +19,10 @@ include("header.php");
             <input type="text" name="title" class="w-100 form-control border-0 border-bottom border-dark p-2" placeholder="Enter your Title ....">
             <br>
             <br>
-         
-                <textarea name="short_des" id="short_des" placeholder="Enter your Short description......." class="bg-info text-danger"></textarea>
+
+            <textarea name="short_des" id="short_des" placeholder="Enter your Short description......." class="bg-info text-danger"></textarea>
             <br>
-                <textarea name="description" id="description" placeholder="Enter your description......."></textarea>
+            <textarea name="description" id="description" placeholder="Enter your description......."></textarea>
             <br>
             <br>
             <button type="submit" class="btn btn-md btn-secondary">Submit</button>

@@ -15,4 +15,3 @@ if($result){
 }else{
     echo("No blog is alive!" . $connect->connect_error);
 } */
-?>
